@@ -1,0 +1,183 @@
+<form #RegisterForm=ngForm (ngSubmit)="OnSubmit(RegisterForm)">
+
+  <div class="main-box">
+    <div class="design-box">
+      <header class="flex-space-box">
+        <div class="logo">
+          <a href="#">
+            <img src="../../assets/images/logo.svg">
+          </a>
+        </div>
+        <div class="account-detail flex-space-box">
+          <div class="users-box flex-space-box">
+            <div class="user-thumb">
+              <img src="../../assets/images/user.jpg">
+            </div>
+            <div class="user-name">Williams White</div>
+          </div>
+          <div class="button-box">
+            <button class="blue-button flex-space-box">Logout <img src="../../assets/images/icon-logout.svg"></button>
+          </div>
+        </div>
+      </header>
+      <section class="title-box-top">
+        <h1 class="page-title"><b>Subscription Plans</b></h1>
+        <h2 class="x-small-title"><strong>You may choose the plans which will be best suited your requirements.</strong></h2>
+      </section>
+      <section class="main-plan-item current-plan">
+        <h2 class="title-small section-title"><strong>Your Current Plan</strong></h2>
+        <div class="plan-box highlight-border">
+          <div class="flex-space-box flex-align-top">
+            <div class="label-line"><span class="highlight-color">Weekly Subscription Plan |</span> Valid till 2nd Aug, 2020</div>
+            <img src="../../assets/images/checked-round-green.svg">
+          </div>
+        <h3 class="title"><b>Basic</b></h3>
+        <div class="flex-space-box flex-align-bottom">
+          <h4 class="x-small-title medium">US Sports Package</h4>
+          <span class="page-title"><strong>$24.99</strong></span>
+        </div>
+      </div>
+    </section>
+    <section class="plans-box">
+      <h2 class="title-small section-title"><strong>Your Current Plan</strong></h2>
+      <div id="accordion" class="accordion">
+        <div class="accordion-item plan-box">
+          <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+            <div class="flex-space-box top-arrow-box">
+              <h3 class="title"><b>Silver <sub>(Any 2 Full Packages)</sub></b></h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21.988" height="12.569" viewBox="0 0 21.988 12.569"><path id="Path_22845" data-name="Path 22845" d="M10.992,0A1.542,1.542,0,0,0,9.9.46L.453,9.927a1.549,1.549,0,0,0,2.191,2.19l8.35-8.376,8.348,8.372a1.549,1.549,0,1,0,2.195-2.187L12.093.455A1.537,1.537,0,0,0,11,0Z" fill="#232323"/></svg>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="general-check-box round">
+                <input type="checkbox" (change)="Totally(RegisterForm)" name="silverW" ngModel  id="first-pla">
+                <label for="first-pla">$44.99 <sub>Weekly Plan</sub></label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="general-check-box round">
+                <input type="checkbox" (change)="Totally(RegisterForm)" name="silverM" ngModel id="second-pla">
+                <label for="second-pla">$139.99 <sub>Monthly Plan</sub></label>
+              </div>
+            </div>
+          </div>
+          <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
+            <div id="subaccordion" class="accordion sub-accordion">
+              <div class="accordion-item">
+                <div class="card-header collapsed" data-toggle="collapse" href="#collapseSubOne">
+                  <div class="flex-space-box top-arrow-box">
+                    <div class="general-check-box with-no-label">
+                      <input type="checkbox" name="ussports" ngModel>
+                      <label class="title-small">US Sports</label>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21.988" height="12.569" viewBox="0 0 21.988 12.569"><path id="Path_22845" data-name="Path 22845" d="M10.992,0A1.542,1.542,0,0,0,9.9.46L.453,9.927a1.549,1.549,0,0,0,2.191,2.19l8.35-8.376,8.348,8.372a1.549,1.549,0,1,0,2.195-2.187L12.093.455A1.537,1.537,0,0,0,11,0Z" fill="#232323"/></svg>
+                  </div>
+                </div>
+                <div id="collapseSubOne" class="card-body collapse" data-parent="#subaccordion" >
+                  <div class="sub-accordion-content">
+                    <p>NBA (National Basketball Association), MLS (Major League Soccer), MLB (Major League Baseball), NFL (National Football League), NHL (National Hockey League)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="card-header collapsed" data-toggle="collapse" href="#collapseSubTwo">
+                  <div class="flex-space-box top-arrow-box">
+                    <div class="general-check-box with-no-label">
+                      <input type="checkbox" name="ausports" ngModel>
+                      <label class="title-small">AU Sports</label>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21.988" height="12.569" viewBox="0 0 21.988 12.569"><path id="Path_22845" data-name="Path 22845" d="M10.992,0A1.542,1.542,0,0,0,9.9.46L.453,9.927a1.549,1.549,0,0,0,2.191,2.19l8.35-8.376,8.348,8.372a1.549,1.549,0,1,0,2.195-2.187L12.093.455A1.537,1.537,0,0,0,11,0Z" fill="#232323"/></svg>
+                  </div>
+                </div>
+                <div id="collapseSubTwo" class="card-body collapse" data-parent="#subaccordion" >
+                  <div class="sub-accordion-content">
+                    <p>NBA (National Basketball Association), MLS (Major League Soccer), MLB (Major League Baseball), NFL (National Football League), NHL (National Hockey League)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="card-header collapsed" data-toggle="collapse" href="#collapseSubThree">
+                  <div class="flex-space-box top-arrow-box">
+                    <div class="general-check-box with-no-label">
+                      <input type="checkbox" name="eufootball" ngModel>
+                      <label class="title-small">EU Football</label>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21.988" height="12.569" viewBox="0 0 21.988 12.569"><path id="Path_22845" data-name="Path 22845" d="M10.992,0A1.542,1.542,0,0,0,9.9.46L.453,9.927a1.549,1.549,0,0,0,2.191,2.19l8.35-8.376,8.348,8.372a1.549,1.549,0,1,0,2.195-2.187L12.093.455A1.537,1.537,0,0,0,11,0Z" fill="#232323"/></svg>
+                  </div>
+                </div>
+                <div id="collapseSubThree" class="card-body collapse" data-parent="#subaccordion" >
+                  <div class="sub-accordion-content">
+                    <p>NBA (National Basketball Association), MLS (Major League Soccer), MLB (Major League Baseball), NFL (National Football League), NHL (National Hockey League)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="card-header collapsed" data-toggle="collapse" href="#collapseSubFour">
+                  <div class="flex-space-box top-arrow-box">
+                    <div class="general-check-box with-no-label">
+                      <input type="checkbox" name="auhorser" ngModel>
+                      <label class="title-small">AU Horse Racing</label>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21.988" height="12.569" viewBox="0 0 21.988 12.569"><path id="Path_22845" data-name="Path 22845" d="M10.992,0A1.542,1.542,0,0,0,9.9.46L.453,9.927a1.549,1.549,0,0,0,2.191,2.19l8.35-8.376,8.348,8.372a1.549,1.549,0,1,0,2.195-2.187L12.093.455A1.537,1.537,0,0,0,11,0Z" fill="#232323"/></svg>
+                  </div>
+                </div>
+                <div id="collapseSubFour" class="card-body collapse" data-parent="#subaccordion" >
+                  <div class="sub-accordion-content">
+                    <p>NBA (National Basketball Association), MLS (Major League Soccer), MLB (Major League Baseball), NFL (National Football League), NHL (National Hockey League)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item plan-box">
+          <div class="card-header collapsed" data-toggle="collapse" href="#collapseTwo">
+            <div class="flex-space-box top-arrow-box">
+              <h3 class="title"><b>Gold <sub>(Any 3 Full Packages)</sub></b></h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21.988" height="12.569" viewBox="0 0 21.988 12.569"><path id="Path_22845" data-name="Path 22845" d="M10.992,0A1.542,1.542,0,0,0,9.9.46L.453,9.927a1.549,1.549,0,0,0,2.191,2.19l8.35-8.376,8.348,8.372a1.549,1.549,0,1,0,2.195-2.187L12.093.455A1.537,1.537,0,0,0,11,0Z" fill="#232323"/></svg>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="general-check-box round">
+                <input type="checkbox" (change)="Totally(RegisterForm)" name="goldw" ngModel id="first-plan">
+                <label for="first-plan">$59.99 <sub>Weekly Plan</sub></label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="general-check-box round">
+                <input type="checkbox" (change)="Totally(RegisterForm)" name="goldm" ngModel id="second-plan">
+                <label for="second-plan">$189.99 <sub>Monthly Plan</sub></label>
+              </div>
+            </div>
+          </div>
+          <div id="collapseTwo" class="card-body collapse" data-parent="#accordion" >
+            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="no-padding-top">
+      <div class="plan-box gray-box">
+        <div class="flex-space-box flex-align-top">
+          <h3 class="title"><b>Total</b></h3>
+          <div class="h2">
+            {{totalRs}}
+          </div>
+        </div>
+        <h4 class="x-small-title medium">You will get a discount of 33% on total amount.</h4>
+      </div>
+    </section>
+
+    <section class="action-btn">
+      <button type="submit"  class="blue-button medium-size-btn" data-toggle="modal" data-target="#largeModal">Proceed to Pay</button>
+    </section>
+  </div>
+  <div class="photo-box">
+    <img src="../../assets/images/sidebar-panel.jpg">
+  </div>
+</div>
+
+
+</form>
